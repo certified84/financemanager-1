@@ -4,13 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".AddExpenseActivity"
+    tools:context=".ui.expense.AddExpense"
     android:background="@color/bckGround"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:focusable="false"
         android:focusableInTouchMode="true"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView_header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:textColor="@color/colorSecondary" />
 
             <EditText
-                android:id="@+id/editTextTextNumber"
+                android:id="@+id/editTextExpenseAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -100,7 +100,7 @@
                 android:textColor="@color/colorSecondary" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/editTextExpenseDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -117,7 +117,6 @@
 
     <Button
         android:id="@+id/button_add_expense"
-        android:onClick="saveExpense"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:backgroundTint="@color/colorSecondary"
@@ -141,19 +140,6 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-<!--    <Button-->
-<!--        android:id="@+id/button_cancel"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        android:onClick="cancel"-->
-<!--        android:text="Cancel"-->
-<!--        android:background="@color/bckGround"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -7,7 +7,7 @@
     android:id="@+id/parent_net_income"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context=".NetIncomeActivity">
+    tools:context=".ui.netincome.AddIncomeActivity">
 
     <EditText
         android:id="@+id/editTextNumber_income_amount"
@@ -28,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorSecondary"
-        android:onClick="saveIncome"
         android:padding="5dp"
         android:text="@string/add_income_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -38,15 +37,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber_income_amount" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_income"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_add_income"
-        tools:listitem="@layout/item_income" />
 </androidx.constraintlayout.widget.ConstraintLayout>
